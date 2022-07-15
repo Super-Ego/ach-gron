@@ -1,0 +1,14 @@
+// -----------------------------------------------------------------------------
+// GSAP Animation utility classes
+// -----------------------------------------------------------------------------
+
+body:not(.block-editor-writing-flow) {
+    [data-animation="fade-in"] {
+        opacity: 0;
+    }
+
+    [data-animation="fade-up"] {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+}
