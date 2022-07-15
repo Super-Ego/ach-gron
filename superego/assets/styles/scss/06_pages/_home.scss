@@ -2,4 +2,10 @@
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
 
-@use '../01_abstracts/index' as *;
+@use "../01_abstracts/index" as *;
+
+body #frontpage-banner {
+  height: 100vh;
+  width: calc(100vw - var(--se--header-width));
+  background: var(--wp--preset--color--accent-d);
+}

@@ -51,23 +51,49 @@ Telefon: +45 78 70 29 29 - Email: horsens@superego.nu
 	endif; ?>
 
 	<div id="wrapper" class="wrapper">
-		<header id="main-header" class="header" role="banner" aria-label="Site header">
-			<div class="container">
-				<div class="row">
+		<div id="wrapper" class="wrapper">
+			<!-- Desktop menu -->
+			<header id="main-header" class="header" role="banner" aria-label="Site header">
+				<div class="container">
+					<div class="row">
 
-					<div class="col-6 col-sm-4">
-						<a id="site-logo" href="<?= get_home_url(); ?>" title="<? wp_title(); ?>">
-							<?= svg_image('logo'); ?>
-						</a>
+						<div class="d-flex justify-content-center align-items-start logo-container">
+							<a id="site-logo" href="<?= get_home_url(); ?>" title="<? wp_title(); ?>">
+								<?= svg_image('logo_fig'); ?>
+								<div class="logo-text">
+									<?= svg_image('logo_text'); ?>
+								</div>
+							</a>
+						</div>
+
+
+						<div id="menu-toggle" class="d-flex justify-content-center align-items-center">
+							<div id="toggle" class="not-active">
+								<div class="inner">
+									<span id="line_1"></span>
+									<span id="line_2"></span>
+									<span id="line_3"></span>
+								</div>
+							</div>
+						</div>
+
 					</div>
-
-					<div class="col-6 col-sm-8">
-						<nav id="main-navigation">
-							<? superego_top_nav(); ?>
-						</nav>
-					</div>
-
 				</div>
-			</div>
-		</header>
-		<!-- end #main-header -->
+
+				<div id="main-navigation" class="outOfBounds">
+					<nav>
+						<? superego_top_nav('main-nav'); ?>
+					</nav>
+					<? if ($detect->isTablet()) : ?>
+						<div id="menufig-container" class="tablet">
+							<?= svg_image('menu_fig_mobile'); ?>
+						</div>
+					<? else : ?>
+						<div id="menufig-container">
+							<?= svg_image('menu_fig'); ?>
+						</div>
+					<? endif; ?>
+				</div>
+				<div class="nav-overlay"></div>
+			</header>
+			<!-- end #main-header -->

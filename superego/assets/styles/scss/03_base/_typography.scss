@@ -46,3 +46,17 @@ body .strong {
     font-weight: 500;
   }
 }
+
+body {
+  // Mobile
+  @include mq-max(md) {
+    --wp--preset--font-size--h-1: 3rem;
+    --wp--preset--font-size--h-2: 2rem;
+    --wp--preset--font-size--h-3: 1.5rem;
+    --wp--preset--font-size--h-4: 1.25rem;
+    --wp--preset--font-size--h-5: 1.125rem;
+    --wp--preset--font-size--h-6: 1rem;
+    --wp--preset--font-size--body-regular: 1rem;
+    --wp--preset--font-size--body-quote: 1.25rem;
+  }
+}
